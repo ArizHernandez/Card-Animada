@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #131313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contenedor {
+  position: relative;
+}
+.contenedor .card {
+  position: relative;
+  background: #232323;
+  height: 450px;
+  width: 320px;
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.contenedor .card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #20cc46;
+  clip-path: circle(140px at 80% 10%);
+  transition: 0.4s ease-in-out;
+}
+.contenedor .card:hover::before {
+  clip-path: circle(190px at 80% 0%);
+}
+.contenedor .card::after {
+  content: "Nike";
+  position: absolute;
+  top: 27%;
+  left: -20%;
+  font-size: 13em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+.contenedor .card .card-imagen {
+  position: absolute;
+  top: 20%;
+  left: 50px;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+.contenedor .card .card-imagen img {
+  z-index: 10000;
+  transform: rotate(15deg);
+  width: 250px;
+}
+.contenedor .card .card-contenido {
+  position: absolute;
+  top: 70%;
+  z-index: 1000;
+  transition: 0.7s;
+  left: 20%;
+}
+.contenedor .card .card-contenido h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.contenedor .card .card-contenido .card-size {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.contenedor .card .card-contenido .card-size h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-right: 15px;
+}
+.contenedor .card .card-contenido .card-size span {
+  width: 25px;
+  padding: 4px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 10100;
+  cursor: pointer;
+  background: #ffffff;
+}
+.contenedor .card .card-contenido .card-size span:hover {
+  background: #1a387a;
+  color: #fff;
+}
+.contenedor .card .card-contenido .card-color {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+.contenedor .card .card-contenido .card-color h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-right: 15px;
+}
+.contenedor .card .card-contenido .card-color span {
+  margin-top: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.contenedor .card .card-contenido .card-color .green {
+  background: #21bd28;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.contenedor .card .card-contenido .card-color .blue {
+  background: #273ec2;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.contenedor .card .card-contenido .card-color .red {
+  background: #e22828;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.contenedor .card .card-contenido .btnComprar {
+  opacity: 0;
+  visibility: hidden;
+}
+.contenedor .card .card-contenido .btnComprar a {
+  cursor: pointer;
+  background: #fff;
+  transition: 0.5s;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 5px;
+}
+.contenedor .card .card-contenido .btnComprar a:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+.contenedor .card .card-contenido .btnComprar a:visited {
+  color: #000;
+}
+.contenedor:hover .card-imagen {
+  transform: translateY(0%);
+  top: 0%;
+}
+.contenedor:hover .card-contenido {
+  top: 50%;
+  transform: translateY(0);
+}
+.contenedor:hover .card-contenido .card-size {
+  opacity: 100%;
+  transition-delay: 0.5s;
+  visibility: visible;
+}
+.contenedor:hover .card-contenido .card-color {
+  opacity: 100%;
+  transition-delay: 0.6s;
+  visibility: visible;
+}
+.contenedor:hover .card-contenido .btnComprar {
+  transition-delay: 0.7s;
+  opacity: 100%;
+  visibility: visible;
+}
+
+/*# sourceMappingURL=Estilos.css.map */

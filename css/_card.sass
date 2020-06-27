@@ -1,0 +1,140 @@
+.contenedor
+    position: relative
+    .card
+        position: relative
+        background: #232323
+        height: 450px
+        width: 320px
+        border-radius: 20px
+        text-align: center
+        overflow: hidden
+        &::before
+            position: absolute
+            content: ''
+            top:0
+            left: 0
+            width: 100%
+            height: 100%
+            background: #20cc46
+            clip-path: circle(140px at 80% 10%)
+            transition: .4s ease-in-out
+        &:hover::before
+             clip-path: circle(190px at 80% 0%)
+        &::after
+            content:'Nike'
+            position: absolute
+            top: 27% 
+            left: -20%
+            font-size: 13em
+            font-weight: 800
+            font-style: italic
+            color: rgba(#fff,.04)
+        .card-imagen
+            position: absolute
+            top:20%
+            left:50px
+            transform: translateY(10px)
+            transition: .5s
+            img
+                z-index: 10000
+                transform: rotate(15deg)    
+                width: 250px
+        .card-contenido
+            position: absolute
+            top:70%
+            z-index: 1000
+            transition: .7s
+            left:20% 
+            h2 
+                color: #fff
+                margin-bottom: 10px
+            .card-size
+                display: flex
+                opacity: 0
+                visibility: hidden
+                transition: .5s
+                align-items: baseline
+                justify-content: center
+                margin-bottom: 15px 
+                h3
+                    color: #fff
+                    font-weight: 400
+                    margin-right: 15px 
+                span
+                    width:25px
+                    padding: 4px
+                    margin-right: 10px
+                    text-align: center
+                    border-radius: 5px
+                    font-size: 14px 
+                    z-index: 10100
+                    cursor: pointer
+                    background: #ffffff
+                    &:hover
+                        background: #1a387a
+                        color: #fff
+            .card-color
+                margin-bottom: 30px
+                display: flex
+                justify-content: center
+                opacity: 0
+                transition: .5s
+                visibility: hidden
+                h3
+                    color: #fff
+                    font-weight: 400
+                    margin-right: 15px 
+                span
+                    margin-top: 5px
+                    margin-right: 10px
+                    cursor: pointer
+                .green
+                    background: #21bd28
+                    border-radius: 50%
+                    width: 20px
+                    height: 20px
+                .blue
+                    background: #273ec2
+                    border-radius: 50%
+                    width: 20px
+                    height: 20px
+                .red
+                    background: #e22828
+                    width: 20px
+                    height: 20px
+                    border-radius: 50%
+            .btnComprar
+                opacity: 0
+                visibility: hidden
+                a
+                    cursor: pointer
+                    background: #fff
+                    transition: .5s
+                    padding: 10px
+                    text-decoration: none
+                    font-weight: 800
+                    border-radius: 5px
+                    &:hover
+                        background: rgba(#fff,.6)
+                    &:visited
+                        color: #000
+                    
+    &:hover
+        .card-imagen
+            transform: translateY(0%)
+            top: 0%    
+        .card-contenido
+            top: 50%
+            transform: translateY(0)
+            .card-size
+                opacity: 100%
+                transition-delay: .5s
+                visibility: visible
+            .card-color
+                opacity: 100%
+                transition-delay: .6s
+                visibility: visible
+            .btnComprar
+                transition-delay: .7s
+                opacity: 100%
+                visibility: visible
